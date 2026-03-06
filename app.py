@@ -1400,7 +1400,7 @@ class App(ft.Container):
                             ft.Row(
                                 alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
                                 controls=[
-                                    WindowDragArea(
+                                    ft.WindowDragArea(
                                         expand=True,
                                         content=ft.Container(
                                             height=40,
