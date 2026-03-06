@@ -158,7 +158,7 @@ class App(UserControl):
                                                     width=20,
                                                     content=Image(
                                                         src="assets/icons/c.png",
-                                                        fit=ImageFit.COVER,
+                                                        fit=ft.ImageFit.COVER,
                                                         color=sb_ic,
                                                     ),
                                                 ),
@@ -208,7 +208,7 @@ class App(UserControl):
                                                     width=20,
                                                     content=Image(
                                                         src="assets/icons/s.png",
-                                                        fit=ImageFit.COVER,
+                                                        fit=ft.ImageFit.COVER,
                                                         color=sb_ic,
                                                     ),
                                                 ),
@@ -281,7 +281,7 @@ class App(UserControl):
                                         width=20,
                                         border_radius=20,
                                         content=Image(
-                                            src="assets/dp.jpg", fit=ImageFit.COVER
+                                            src="assets/dp.jpg", fit=ft.ImageFit.COVER
                                         ),
                                     )
                                 ],
@@ -478,7 +478,7 @@ class App(UserControl):
                             clip_behavior=ClipBehavior.ANTI_ALIAS,
                             content=Image(
                                 src="assets/dp.jpg",
-                                fit=ImageFit.COVER,
+                                fit=ft.ImageFit.COVER,
                             ),
                         ),
                         Column(
@@ -572,7 +572,7 @@ class App(UserControl):
         self.chat_user_details_sidebar_item_info = Container(
             expand=True,
             padding=15,
-            content=Column(
+            content=ft.Column(
                 # expand=True,
                 height=475,
                 scroll="auto",
@@ -774,7 +774,7 @@ class App(UserControl):
         self.settings_sidebar_details_column = Container(
             expand=True,
             padding=15,
-            content=Column(
+            content=ft.Column(
                 # expand=True,
                 height=475,
                 scroll="auto",
@@ -950,7 +950,7 @@ class App(UserControl):
                                 padding=8,
                                 width=140,
                                 bgcolor=csc,
-                                content=Column(
+                                content=ft.Column(
                                     alignment="spaceBetween",
                                     spacing=5,
                                     controls=[
@@ -1030,7 +1030,7 @@ class App(UserControl):
                                 padding=8,
                                 width=140,
                                 bgcolor=csc,
-                                content=Column(
+                                content=ft.Column(
                                     alignment="spaceBetween",
                                     spacing=5,
                                     controls=[
@@ -1131,7 +1131,7 @@ class App(UserControl):
                         height=400,
                         width=500,
                         bgcolor=csc,
-                        content=Column(
+                        content=ft.Column(
                             controls=[
                                 Row(
                                     alignment="spaceBetween",
@@ -1326,7 +1326,7 @@ class App(UserControl):
                     padding=10,
                     bgcolor=sc,
                     border_radius=ih_br,
-                    content=Column(
+                    content=ft.Column(
                         spacing=4,
                         controls=[
                             Text(
@@ -1382,7 +1382,7 @@ class App(UserControl):
         self.dm_screen_content = Stack(
             controls=[
                 Container(
-                    content=Column(
+                    content=ft.Column(
                         spacing=0,
                         controls=[
                             Row(
@@ -1519,9 +1519,9 @@ class App(UserControl):
                                 expand=True,
                                 image_src=wallpaper,
                                 image_opacity=0.2,
-                                image_fit=ImageFit.COVER,
+                                image_fit=ft.ImageFit.COVER,
                                 bgcolor="#1a343434",
-                                content=Column(
+                                content=ft.Column(
                                     scroll="auto",
                                     spacing=10,
                                     controls=[
