@@ -379,7 +379,7 @@ class App(UserControl):
                                                         padding=padding.only(
                                                             left=15, top=5
                                                         ),
-                                                        content=TextField(
+                                                        content=ft.TextField(
                                                             border=InputBorder.NONE,
                                                             hint_text="Search or start a new chat",
                                                             hint_style=ft.TextStyle(
@@ -1176,7 +1176,7 @@ class App(UserControl):
                                         controls=[
                                             Container(
                                                 padding=padding.only(left=15, top=5),
-                                                content=TextField(
+                                                content=ft.TextField(
                                                     border=InputBorder.NONE,
                                                     hint_text="Search emojis",
                                                     hint_style=ft.TextStyle(
@@ -1576,7 +1576,7 @@ class App(UserControl):
                                         Container(
                                             on_hover=self.sidebar_btn_hovered,
                                             expand=True,
-                                            content=TextField(
+                                            content=ft.TextField(
                                                 expand=True,
                                                 multiline=True,
                                                 border=InputBorder.NONE,
