@@ -120,7 +120,7 @@ class App(UserControl):
         self.chats_screen.update()
 
     def sidebar(self):
-        self.sidebar_column = Column(
+        self.sidebar_column = ft.Column(
             horizontal_alignment="center",
             alignment="spaceBetween",
             spacing=0,
@@ -307,7 +307,7 @@ class App(UserControl):
                                     Image(
                                         src="assets/icons/logo.png",
                                     ),
-                                    Text(
+                                    ft.Text(
                                         value="WhatsApp",
                                         size=14,
                                     ),
@@ -323,7 +323,7 @@ class App(UserControl):
                                 alignment="spaceBetween",
                                 vertical_alignment="center",
                                 controls=[
-                                    Text(
+                                    ft.Text(
                                         value="Chats",
                                         size=24,
                                         weight=ft.FontWeight.W_500,
@@ -436,7 +436,7 @@ class App(UserControl):
                                             ),
                                             margin=margin.only(right=100),
                                         ),
-                                        Text(
+                                        ft.Text(
                                             value="2",
                                             color=ic,
                                             weight=ft.FontWeight.W_600,
@@ -501,7 +501,7 @@ class App(UserControl):
                                                 width=120,
                                                 content=Text("#Se7en", no_wrap=True),
                                             ),
-                                            Text("12:20AM"),
+                                            ft.Text("12:20AM"),
                                         ],
                                     ),
                                 ),
@@ -529,7 +529,7 @@ class App(UserControl):
             ),
         )
 
-        self.chats_contents_column = Column(
+        self.chats_contents_column = ft.Column(
             scroll="auto",
             expand=True,
             controls=[
@@ -544,7 +544,7 @@ class App(UserControl):
             self.msg_hover_emoji.visible = False
         self.msg_hover_emoji.update()
 
-    def show_msg_menu(self, e: LongPressEndEvent):
+    def show_msg_menu(self, e: ft.LongPressEndEvent):
         print(e.target)
 
     def close_window(self, e):
@@ -597,46 +597,46 @@ class App(UserControl):
                     ft.Row(
                         alignment="center",
                         controls=[
-                            Text("Mr. Newton😊", size=20, weight=ft.FontWeight.W_600)
+                            ft.Text("Mr. Newton😊", size=20, weight=ft.FontWeight.W_600)
                         ],
                     ),
-                    Text(
+                    ft.Text(
                         "About",
                         size=14,
                         weight=ft.FontWeight.W_300,
                         color="white24",
                     ),
-                    Text(
+                    ft.Text(
                         "Hey there! I am using WhatsApp",
                         size=14,
                         weight=ft.FontWeight.W_400,
                         color="#CCffffff",
                     ),
-                    Text(
+                    ft.Text(
                         "Phone number",
                         size=14,
                         weight=ft.FontWeight.W_300,
                         color="white24",
                     ),
-                    Text(
+                    ft.Text(
                         "+233 548 007 499",
                         size=14,
                         weight=ft.FontWeight.W_400,
                         color="#CCffffff",
                     ),
-                    Text(
+                    ft.Text(
                         "Disappearing messages",
                         size=14,
                         weight=ft.FontWeight.W_300,
                         color="white24",
                     ),
-                    Text(
+                    ft.Text(
                         "Off",
                         size=14,
                         weight=ft.FontWeight.W_400,
                         color="#CCffffff",
                     ),
-                    Text(
+                    ft.Text(
                         "Muted notifications",
                         size=14,
                         weight=ft.FontWeight.W_300,
@@ -679,7 +679,7 @@ class App(UserControl):
                             ]
                         ),
                     ),
-                    Text(
+                    ft.Text(
                         "Notification tone",
                         size=14,
                         weight=ft.FontWeight.W_300,
@@ -799,7 +799,7 @@ class App(UserControl):
                     ft.Row(
                         alignment="spaceBetween",
                         controls=[
-                            # Text(
+                            # ft.Text(
                             #   'Mr. Newton😊',
                             # size=20,
                             #   weight=ft.FontWeight.W_600
@@ -820,7 +820,7 @@ class App(UserControl):
                             ),
                         ],
                     ),
-                    Text(
+                    ft.Text(
                         "About",
                         size=14,
                         weight=ft.FontWeight.W_300,
@@ -851,13 +851,13 @@ class App(UserControl):
                             ),
                         ],
                     ),
-                    Text(
+                    ft.Text(
                         "Phone number",
                         size=14,
                         weight=ft.FontWeight.W_300,
                         color="white24",
                     ),
-                    Text(
+                    ft.Text(
                         "+233 548 007 499",
                         size=14,
                         weight=ft.FontWeight.W_400,
@@ -894,7 +894,7 @@ class App(UserControl):
                                 color=sb_ic,
                                 # scale=0.5
                             ),
-                            Text("Overview"),
+                            ft.Text("Overview"),
                         ],
                     ),
                 ],
@@ -928,7 +928,7 @@ class App(UserControl):
                                 color=sb_ic,
                                 # scale=0.5
                             ),
-                            Text("Overview"),
+                            ft.Text("Overview"),
                         ],
                     ),
                 ],
@@ -985,7 +985,7 @@ class App(UserControl):
                                                                         color=sb_ic,
                                                                         # scale=0.5
                                                                     ),
-                                                                    Text("Close"),
+                                                                    ft.Text("Close"),
                                                                 ],
                                                             ),
                                                         ],
@@ -1065,7 +1065,7 @@ class App(UserControl):
                                                                         color=sb_ic,
                                                                         # scale=0.5
                                                                     ),
-                                                                    Text("Profile"),
+                                                                    ft.Text("Profile"),
                                                                 ],
                                                             ),
                                                         ],
@@ -1089,7 +1089,7 @@ class App(UserControl):
                                                                         color=sb_ic,
                                                                         # scale=0.5
                                                                     ),
-                                                                    Text("Close"),
+                                                                    ft.Text("Close"),
                                                                 ],
                                                             ),
                                                         ],
@@ -1142,13 +1142,13 @@ class App(UserControl):
                                     controls=[
                                         ft.Row(
                                             controls=[
-                                                Text("Emoji", size=16),
-                                                Text(
+                                                ft.Text("Emoji", size=16),
+                                                ft.Text(
                                                     "GIFs",
                                                     size=16,
                                                     color="white24",
                                                 ),
-                                                Text(
+                                                ft.Text(
                                                     "Stickers",
                                                     size=16,
                                                     color="white24",
@@ -1333,7 +1333,7 @@ class App(UserControl):
                     content=ft.Column(
                         spacing=4,
                         controls=[
-                            Text(
+                            ft.Text(
                                 value="Lorem  Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
                                 selectable=True,
                                 color=smc,
@@ -1344,7 +1344,7 @@ class App(UserControl):
                                 spacing=4,
                                 alignment="end",
                                 controls=[
-                                    Text(
+                                    ft.Text(
                                         "5:30 AM",
                                         size=10,
                                         weight=ft.FontWeight.W_600,
@@ -1447,7 +1447,7 @@ class App(UserControl):
                                                         bgcolor=rc,
                                                         content=Icon(icons.PERSON),
                                                     ),
-                                                    Text(value="#Se7en🙏"),
+                                                    ft.Text(value="#Se7en🙏"),
                                                 ]
                                             ),
                                         ),
