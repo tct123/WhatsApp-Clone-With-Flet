@@ -134,7 +134,7 @@ class App(UserControl):
                             width=s_btn_w,
                             bgcolor=s_btn_h_c,
                             border_radius=5,
-                            content=Row(
+                            content=ft.Row(
                                 spacing=0,
                                 alignment="spaceBetween",
                                 vertical_alignment="center",
@@ -184,7 +184,7 @@ class App(UserControl):
                             width=s_btn_w,
                             # bgcolor = s_btn_h_c,
                             border_radius=ih_br,
-                            content=Row(
+                            content=ft.Row(
                                 spacing=0,
                                 alignment="spaceBetween",
                                 vertical_alignment="center",
@@ -241,7 +241,7 @@ class App(UserControl):
                             height=s_btn_h,
                             width=s_btn_w,
                             border_radius=5,
-                            content=Row(
+                            content=ft.Row(
                                 spacing=0,
                                 alignment="center",
                                 controls=[
@@ -256,7 +256,7 @@ class App(UserControl):
                             height=s_btn_h,
                             width=s_btn_w,
                             border_radius=5,
-                            content=Row(
+                            content=ft.Row(
                                 spacing=0,
                                 alignment="center",
                                 controls=[
@@ -271,7 +271,7 @@ class App(UserControl):
                             height=s_btn_h,
                             width=s_btn_w,
                             border_radius=ih_br,
-                            content=Row(
+                            content=ft.Row(
                                 spacing=0,
                                 alignment="center",
                                 controls=[
@@ -302,7 +302,7 @@ class App(UserControl):
                             height=40,
                             padding=padding.only(left=10),
                             # margin=margin.only(bottom=10),
-                            content=Row(
+                            content=ft.Row(
                                 controls=[
                                     Image(
                                         src="assets/icons/logo.png",
@@ -318,7 +318,7 @@ class App(UserControl):
                             padding=padding.only(
                                 left=chat_screen_padding, right=chat_screen_padding
                             ),
-                            content=Row(
+                            content=ft.Row(
                                 spacing=0,
                                 alignment="spaceBetween",
                                 vertical_alignment="center",
@@ -354,7 +354,7 @@ class App(UserControl):
                             ),
                         ),  # Chats label text and new chat icon and more
                         Container(
-                            content=Row(
+                            content=ft.Row(
                                 alignment="center",
                                 controls=[
                                     Container(
@@ -372,7 +372,7 @@ class App(UserControl):
                                                     width=1, color=htc
                                                 )
                                             ),
-                                            content=Row(
+                                            content=ft.Row(
                                                 controls=[
                                                     Container(
                                                         width=230,
@@ -422,7 +422,7 @@ class App(UserControl):
                                 border_radius=ih_br,
                                 on_hover=self.sidebar_btn_hovered,
                                 padding=padding.only(left=10, right=10),
-                                content=Row(
+                                content=ft.Row(
                                     vertical_alignment="center",
                                     alignment="spaceBetween",
                                     controls=[
@@ -466,7 +466,7 @@ class App(UserControl):
             content=Container(
                 border_radius=ih_br,
                 on_hover=self.sidebar_btn_hovered,
-                content=Row(
+                content=ft.Row(
                     spacing=0,
                     alignment="spaceBetween",
                     vertical_alignment="center",
@@ -487,7 +487,7 @@ class App(UserControl):
                             controls=[
                                 Container(
                                     width=200,
-                                    content=Row(
+                                    content=ft.Row(
                                         alignment="spaceBetween",
                                         # vertical_alignment='center',
                                         spacing=0,
@@ -503,7 +503,7 @@ class App(UserControl):
                                 ),
                                 Container(
                                     width=200,
-                                    content=Row(
+                                    content=ft.Row(
                                         alignment="spaceBetween",
                                         # vertical_alignment='center',
                                         spacing=0,
@@ -644,7 +644,7 @@ class App(UserControl):
                         bgcolor=s_btn_h_c,
                         padding=padding.only(left=10),
                         border_radius=ih_br,
-                        content=Row(
+                        content=ft.Row(
                             controls=[
                                 # Image(
                                 #   src='assets/icons/audio.png',
@@ -684,7 +684,7 @@ class App(UserControl):
                     Container(
                         height=35,
                         border_radius=ih_br,
-                        content=Row(
+                        content=ft.Row(
                             spacing=10,
                             controls=[
                                 # Image(
@@ -867,7 +867,7 @@ class App(UserControl):
             bgcolor=s_btn_h_c,
             height=35,
             border_radius=ih_br,
-            content=Row(
+            content=ft.Row(
                 spacing=12,
                 # alignment='spaceBetween',
                 vertical_alignment="center",
@@ -901,7 +901,7 @@ class App(UserControl):
             bgcolor=s_btn_h_c,
             height=35,
             border_radius=ih_br,
-            content=Row(
+            content=ft.Row(
                 spacing=12,
                 # alignment='spaceBetween',
                 vertical_alignment="center",
@@ -944,7 +944,7 @@ class App(UserControl):
                     height=500,
                     width=500,
                     bgcolor=sbc,
-                    content=Row(
+                    content=ft.Row(
                         controls=[
                             Container(
                                 padding=8,
@@ -968,7 +968,7 @@ class App(UserControl):
                                                     bgcolor=s_btn_h_c,
                                                     height=35,
                                                     border_radius=ih_br,
-                                                    content=Row(
+                                                    content=ft.Row(
                                                         alignment="center",
                                                         vertical_alignment="center",
                                                         controls=[
@@ -1024,7 +1024,7 @@ class App(UserControl):
                     height=500,
                     width=500,
                     bgcolor=sbc,
-                    content=Row(
+                    content=ft.Row(
                         controls=[
                             Container(
                                 padding=8,
@@ -1048,7 +1048,7 @@ class App(UserControl):
                                                     bgcolor=s_btn_h_c,
                                                     height=35,
                                                     border_radius=ih_br,
-                                                    content=Row(
+                                                    content=ft.Row(
                                                         alignment="center",
                                                         vertical_alignment="center",
                                                         controls=[
@@ -1072,7 +1072,7 @@ class App(UserControl):
                                                     bgcolor=s_btn_h_c,
                                                     height=35,
                                                     border_radius=ih_br,
-                                                    content=Row(
+                                                    content=ft.Row(
                                                         alignment="center",
                                                         vertical_alignment="center",
                                                         controls=[
@@ -1171,7 +1171,7 @@ class App(UserControl):
                                     border=border.only(
                                         bottom=border.BorderSide(width=1, color=htc)
                                     ),
-                                    content=Row(
+                                    content=ft.Row(
                                         alignment="spaceBetween",
                                         controls=[
                                             Container(
@@ -1264,7 +1264,7 @@ class App(UserControl):
             height=40,
             width=40,
             border_radius=5,
-            content=Row(
+            content=ft.Row(
                 spacing=0,
                 alignment="center",
                 controls=[Icon(icons.MIC_NONE_OUTLINED, size=20, color=sb_ic)],
@@ -1283,7 +1283,7 @@ class App(UserControl):
             ),
             items=[
                 PopupMenuItem(
-                    content=Row(
+                    content=ft.Row(
                         controls=[
                             Image(
                                 src="assets/icons/laugh.png",
@@ -1368,7 +1368,7 @@ class App(UserControl):
         self.msg_obj = Container(
             on_long_press=self.show_msg_menu,
             on_hover=self.msg_hovered,
-            content=Row(
+            content=ft.Row(
                 spacing=25,
                 alignment="end",
                 vertical_alignment="center",
@@ -1428,13 +1428,13 @@ class App(UserControl):
                             Container(
                                 padding=padding.only(left=20, right=15),
                                 height=50,
-                                content=Row(
+                                content=ft.Row(
                                     alignment="spaceBetween",
                                     controls=[
                                         Container(
                                             on_click=self.show_chat_user_popup,
                                             expand=True,
-                                            content=Row(
+                                            content=ft.Row(
                                                 controls=[
                                                     Container(
                                                         height=40,
@@ -1455,7 +1455,7 @@ class App(UserControl):
                                                     height=s_btn_h,
                                                     width=s_btn_w,
                                                     border_radius=5,
-                                                    content=Row(
+                                                    content=ft.Row(
                                                         spacing=0,
                                                         alignment="center",
                                                         controls=[
@@ -1473,7 +1473,7 @@ class App(UserControl):
                                                     height=s_btn_h,
                                                     width=s_btn_w,
                                                     border_radius=5,
-                                                    content=Row(
+                                                    content=ft.Row(
                                                         spacing=0,
                                                         alignment="center",
                                                         controls=[
@@ -1496,7 +1496,7 @@ class App(UserControl):
                                                     height=s_btn_h,
                                                     width=s_btn_w,
                                                     border_radius=5,
-                                                    content=Row(
+                                                    content=ft.Row(
                                                         spacing=0,
                                                         alignment="center",
                                                         controls=[
@@ -1534,7 +1534,7 @@ class App(UserControl):
                                 padding=padding.only(left=10, right=10),
                                 height=50,
                                 bgcolor=csc,
-                                content=Row(
+                                content=ft.Row(
                                     controls=[
                                         Container(
                                             on_hover=self.sidebar_btn_hovered,
@@ -1543,7 +1543,7 @@ class App(UserControl):
                                             height=40,
                                             width=40,
                                             border_radius=5,
-                                            content=Row(
+                                            content=ft.Row(
                                                 spacing=0,
                                                 alignment="center",
                                                 controls=[
@@ -1561,7 +1561,7 @@ class App(UserControl):
                                             height=40,
                                             width=40,
                                             border_radius=5,
-                                            content=Row(
+                                            content=ft.Row(
                                                 spacing=0,
                                                 alignment="center",
                                                 controls=[
