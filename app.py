@@ -324,7 +324,9 @@ class App(UserControl):
                                 vertical_alignment="center",
                                 controls=[
                                     Text(
-                                        value="Chats", size=24, weight=FontWeight.W_500
+                                        value="Chats",
+                                        size=24,
+                                        weight=ft.FontWeight.W_500,
                                     ),
                                     Row(
                                         controls=[
@@ -430,12 +432,14 @@ class App(UserControl):
                                         Container(
                                             content=Text(
                                                 value="Archived",
-                                                weight=FontWeight.W_600,
+                                                weight=ft.FontWeight.W_600,
                                             ),
                                             margin=margin.only(right=100),
                                         ),
                                         Text(
-                                            value="2", color=ic, weight=FontWeight.W_600
+                                            value="2",
+                                            color=ic,
+                                            weight=ft.FontWeight.W_600,
                                         ),
                                     ],
                                 ),
@@ -593,49 +597,49 @@ class App(UserControl):
                     Row(
                         alignment="center",
                         controls=[
-                            Text("Mr. Newton😊", size=20, weight=FontWeight.W_600)
+                            Text("Mr. Newton😊", size=20, weight=ft.FontWeight.W_600)
                         ],
                     ),
                     Text(
                         "About",
                         size=14,
-                        weight=FontWeight.W_300,
+                        weight=ft.FontWeight.W_300,
                         color="white24",
                     ),
                     Text(
                         "Hey there! I am using WhatsApp",
                         size=14,
-                        weight=FontWeight.W_400,
+                        weight=ft.FontWeight.W_400,
                         color="#CCffffff",
                     ),
                     Text(
                         "Phone number",
                         size=14,
-                        weight=FontWeight.W_300,
+                        weight=ft.FontWeight.W_300,
                         color="white24",
                     ),
                     Text(
                         "+233 548 007 499",
                         size=14,
-                        weight=FontWeight.W_400,
+                        weight=ft.FontWeight.W_400,
                         color="#CCffffff",
                     ),
                     Text(
                         "Disappearing messages",
                         size=14,
-                        weight=FontWeight.W_300,
+                        weight=ft.FontWeight.W_300,
                         color="white24",
                     ),
                     Text(
                         "Off",
                         size=14,
-                        weight=FontWeight.W_400,
+                        weight=ft.FontWeight.W_400,
                         color="#CCffffff",
                     ),
                     Text(
                         "Muted notifications",
                         size=14,
-                        weight=FontWeight.W_300,
+                        weight=ft.FontWeight.W_300,
                         color="white24",
                     ),
                     Container(
@@ -678,7 +682,7 @@ class App(UserControl):
                     Text(
                         "Notification tone",
                         size=14,
-                        weight=FontWeight.W_300,
+                        weight=ft.FontWeight.W_300,
                         color="white24",
                     ),
                     Container(
@@ -748,7 +752,7 @@ class App(UserControl):
                                 content=Text(
                                     "Block",
                                     size=14,
-                                    weight=FontWeight.W_400,
+                                    weight=ft.FontWeight.W_400,
                                     color="#CCffffff",
                                 ),
                             ),
@@ -761,7 +765,7 @@ class App(UserControl):
                                 content=Text(
                                     "Report contact",
                                     size=14,
-                                    weight=FontWeight.W_400,
+                                    weight=ft.FontWeight.W_400,
                                     color="#CCffffff",
                                 ),
                             ),
@@ -798,7 +802,7 @@ class App(UserControl):
                             # Text(
                             #   'Mr. Newton😊',
                             # size=20,
-                            #   weight=FontWeight.W_600
+                            #   weight=ft.FontWeight.W_600
                             # ),
                             TextField(
                                 width=200,
@@ -819,7 +823,7 @@ class App(UserControl):
                     Text(
                         "About",
                         size=14,
-                        weight=FontWeight.W_300,
+                        weight=ft.FontWeight.W_300,
                         color="white24",
                     ),
                     Row(
@@ -833,7 +837,7 @@ class App(UserControl):
                                 border=ft.InputBorder.NONE,
                                 text_style=ft.TextStyle(
                                     size=14,
-                                    weight=FontWeight.W_400,
+                                    weight=ft.FontWeight.W_400,
                                     color="#CCffffff",
                                 ),
                             ),
@@ -850,13 +854,13 @@ class App(UserControl):
                     Text(
                         "Phone number",
                         size=14,
-                        weight=FontWeight.W_300,
+                        weight=ft.FontWeight.W_300,
                         color="white24",
                     ),
                     Text(
                         "+233 548 007 499",
                         size=14,
-                        weight=FontWeight.W_400,
+                        weight=ft.FontWeight.W_400,
                         color="#CCffffff",
                     ),
                 ],
@@ -1333,7 +1337,7 @@ class App(UserControl):
                                 value="Lorem  Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
                                 selectable=True,
                                 color=smc,
-                                weight=FontWeight.W_400,
+                                weight=ft.FontWeight.W_400,
                                 size=14,
                             ),
                             Row(
@@ -1343,7 +1347,7 @@ class App(UserControl):
                                     Text(
                                         "5:30 AM",
                                         size=10,
-                                        weight=FontWeight.W_600,
+                                        weight=ft.FontWeight.W_600,
                                         color=mtc,
                                     ),
                                     Icon(icons.DONE, color=mtc, size=10),
