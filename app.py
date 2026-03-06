@@ -361,7 +361,7 @@ class App(ft.UserControl):
                         ),  # Chats label text and new chat icon and more
                         ft.Container(
                             content=ft.Row(
-                                alignment="center",
+                                alignment=ft.MainAxisAlignment.CENTER,  # "center",
                                 controls=[
                                     ft.Container(
                                         clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
@@ -430,7 +430,7 @@ class App(ft.UserControl):
                                 padding=ft.Padding.only(left=10, right=10),
                                 content=ft.Row(
                                     vertical_alignment="center",
-                                    alignment="spaceBetween",
+                                    alignment=ft.MainAxisAlignment.SPACE_BETWEEN,  # "spaceBetween",
                                     controls=[
                                         ft.Icon(ft.Icons.DELETE_OUTLINE),
                                         ft.Container(
@@ -476,8 +476,8 @@ class App(ft.UserControl):
                 on_hover=self.sidebar_btn_hovered,
                 content=ft.Row(
                     spacing=0,
-                    alignment="spaceBetween",
-                    vertical_alignment="center",
+                    alignment=ft.MainAxisAlignment.SPACE_BETWEEN,  # "spaceBetween",
+                    vertical_alignment=ft.CrossAxisAlignment.CENTER,  # "center",
                     controls=[
                         ft.Container(
                             height=50,
@@ -963,7 +963,7 @@ class App(ft.UserControl):
                                 width=140,
                                 bgcolor=csc,
                                 content=ft.Column(
-                                    alignment="spaceBetween",
+                                    alignment=ft.MainAxisAlignment.SPACE_BETWEEN,  # "spaceBetween",
                                     spacing=5,
                                     controls=[
                                         ft.Column(
@@ -1043,7 +1043,7 @@ class App(ft.UserControl):
                                 width=140,
                                 bgcolor=csc,
                                 content=ft.Column(
-                                    alignment="spaceBetween",
+                                    alignment=ft.MainAxisAlignment.SPACE_BETWEEN,  # "spaceBetween",
                                     spacing=5,
                                     controls=[
                                         ft.Column(
