@@ -382,13 +382,13 @@ class App(UserControl):
                                                         content=TextField(
                                                             border=InputBorder.NONE,
                                                             hint_text="Search or start a new chat",
-                                                            hint_style=TextStyle(
+                                                            hint_style=ft.TextStyle(
                                                                 size=14,
                                                                 font_family="arial",
                                                                 color=htc,
                                                             ),
                                                             color=sb_ic,
-                                                            text_style=TextStyle(
+                                                            text_style=ft.TextStyle(
                                                                 size=14,
                                                                 font_family="arial",
                                                                 color=sb_ic,
@@ -657,7 +657,7 @@ class App(UserControl):
                                 ),
                                 Dropdown(
                                     alignment=alignment.center,
-                                    label_style=TextStyle(
+                                    label_style=ft.TextStyle(
                                         size=12,
                                         color="#CCffffff",
                                     ),
@@ -709,7 +709,7 @@ class App(UserControl):
                                     content=Dropdown(
                                         # icon=icons.MUSIC_NOTE_OUTLINED,
                                         alignment=alignment.center,
-                                        label_style=TextStyle(
+                                        label_style=ft.TextStyle(
                                             size=12,
                                             color="#CCffffff",
                                         ),
@@ -831,7 +831,7 @@ class App(UserControl):
                                 value="Hey there! WhatsApp is using me!",
                                 text_size=14,
                                 border=InputBorder.NONE,
-                                text_style=TextStyle(
+                                text_style=ft.TextStyle(
                                     size=14,
                                     weight=FontWeight.W_400,
                                     color="#CCffffff",
@@ -1179,13 +1179,13 @@ class App(UserControl):
                                                 content=TextField(
                                                     border=InputBorder.NONE,
                                                     hint_text="Search emojis",
-                                                    hint_style=TextStyle(
+                                                    hint_style=ft.TextStyle(
                                                         size=14,
                                                         font_family="arial",
                                                         color=htc,
                                                     ),
                                                     color=sb_ic,
-                                                    text_style=TextStyle(
+                                                    text_style=ft.TextStyle(
                                                         size=14,
                                                         font_family="arial",
                                                         color=sb_ic,
@@ -1581,13 +1581,13 @@ class App(UserControl):
                                                 multiline=True,
                                                 border=InputBorder.NONE,
                                                 hint_text="Type a message",
-                                                hint_style=TextStyle(
+                                                hint_style=ft.TextStyle(
                                                     size=14,
                                                     font_family="arial",
                                                     color=htc,
                                                 ),
                                                 color=sb_ic,
-                                                text_style=TextStyle(
+                                                text_style=ft.TextStyle(
                                                     size=14,
                                                     font_family="arial",
                                                     color=sb_ic,
