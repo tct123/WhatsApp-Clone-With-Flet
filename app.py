@@ -27,7 +27,7 @@ mtc = "#689e94"
 smc = "#cddfdb"
 
 
-class App(ft.UserControl):
+class App(ft.Container):
     def __init__(self, pg: ft.Page):
         super().__init__()
         self.pg = pg
