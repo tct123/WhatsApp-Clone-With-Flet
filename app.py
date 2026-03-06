@@ -1358,8 +1358,8 @@ class App(UserControl):
                     shape=ft.BoxShape.RECTANGLE,
                     bgcolor=sc,
                     right=0,
-                    border_radius=BorderRadius(
-                        topLeft=0, topRight=0, bottomLeft=0, bottomRight=20
+                    border_radius=ft.BorderRadius(
+                        top_left=0, top_right=0, bottom_left=0, bottom_right=20
                     ),
                 ),
             ]
