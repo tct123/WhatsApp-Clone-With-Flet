@@ -362,7 +362,7 @@ class App(UserControl):
                                     Container(
                                         clip_behavior=ClipBehavior.ANTI_ALIAS,
                                         border_radius=ih_br,
-                                        content=Container(
+                                        content=ft.Container(
                                             # on_hover=self.sidebar_btn_hovered,
                                             clip_behavior=ClipBehavior.ANTI_ALIAS,
                                             border_radius=ih_br,
@@ -420,7 +420,7 @@ class App(UserControl):
                             height=40,
                             padding=padding.only(left=10, right=10),
                             # border_radius=20,
-                            content=Container(
+                            content=ft.Container(
                                 border_radius=ih_br,
                                 on_hover=self.sidebar_btn_hovered,
                                 padding=padding.only(left=10, right=10),
@@ -467,7 +467,7 @@ class App(UserControl):
         self.chat_row = Container(
             height=70,
             padding=padding.only(left=10, right=10),
-            content=Container(
+            content=ft.Container(
                 border_radius=ih_br,
                 on_hover=self.sidebar_btn_hovered,
                 content=ft.Row(
@@ -944,7 +944,7 @@ class App(UserControl):
             content=Card(
                 expand=True,
                 elevation=15,
-                content=Container(
+                content=ft.Container(
                     height=500,
                     width=500,
                     bgcolor=sbc,
@@ -1023,7 +1023,7 @@ class App(UserControl):
             content=Card(
                 expand=True,
                 elevation=15,
-                content=Container(
+                content=ft.Container(
                     border_radius=ih_br,
                     height=500,
                     width=500,
@@ -1275,9 +1275,9 @@ class App(UserControl):
             ),
         )
 
-        self.msg_hover_emoji = PopupMenuButton(
+        self.msg_hover_emoji = ft.PopupMenuButton(
             tooltip=None,
-            content=Container(
+            content=ft.Container(
                 # on_click=
                 tooltip=None,
                 height=20,
@@ -1394,7 +1394,7 @@ class App(UserControl):
                                 controls=[
                                     WindowDragArea(
                                         expand=True,
-                                        content=Container(
+                                        content=ft.Container(
                                             height=40,
                                         ),
                                     ),
