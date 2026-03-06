@@ -49,7 +49,7 @@ class App(UserControl):
     def init_helper(self):
         self.pg.add(
             ft.Container(
-                clip_behavior=ClipBehavior.ANTI_ALIAS,
+                clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
                 border_radius=br,
                 expand=True,
                 bgcolor=dmc,
@@ -82,7 +82,7 @@ class App(UserControl):
 
     def base_containers(self):
         self.sidebar = ft.Container(
-            padding=padding.only(top=50, bottom=50),
+            padding=ft.Padding.only(top=50, bottom=50),
             width=sbw,
             bgcolor=sbc,
             content=self.sidebar_column,
@@ -125,7 +125,7 @@ class App(UserControl):
             alignment="spaceBetween",
             spacing=0,
             controls=[
-                Column(
+                ft.Column(
                     controls=[
                         ft.Container(
                             # on_hover=self.sidebar_btn_hovered,
@@ -142,7 +142,7 @@ class App(UserControl):
                                     ft.Container(
                                         offset=transform.Offset(0, 0),
                                         animate_offset=animation.Animation(1000),
-                                        clip_behavior=ClipBehavior.ANTI_ALIAS,
+                                        clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
                                         height=17,
                                         width=3,
                                         bgcolor=ic,
@@ -153,10 +153,10 @@ class App(UserControl):
                                         content=ft.Stack(
                                             controls=[
                                                 ft.Container(
-                                                    clip_behavior=ClipBehavior.ANTI_ALIAS,
+                                                    clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
                                                     height=20,
                                                     width=20,
-                                                    content=Image(
+                                                    content=ft.Image(
                                                         src="assets/icons/c.png",
                                                         fit=ft.ImageFit.COVER,
                                                         color=sb_ic,
@@ -165,7 +165,7 @@ class App(UserControl):
                                                 ft.Container(
                                                     right=1,
                                                     top=1,
-                                                    clip_behavior=ClipBehavior.ANTI_ALIAS,
+                                                    clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
                                                     height=8,
                                                     width=8,
                                                     bgcolor=nac,
@@ -192,7 +192,7 @@ class App(UserControl):
                                     ft.Container(
                                         offset=transform.Offset(0, 0),
                                         animate_offset=animation.Animation(1000),
-                                        clip_behavior=ClipBehavior.ANTI_ALIAS,
+                                        clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
                                         height=17,
                                         width=3,
                                         # bgcolor=ic,
@@ -203,10 +203,10 @@ class App(UserControl):
                                         content=ft.Stack(
                                             controls=[
                                                 ft.Container(
-                                                    clip_behavior=ClipBehavior.ANTI_ALIAS,
+                                                    clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
                                                     height=20,
                                                     width=20,
-                                                    content=Image(
+                                                    content=ft.Image(
                                                         src="assets/icons/s.png",
                                                         fit=ft.ImageFit.COVER,
                                                         color=sb_ic,
@@ -215,7 +215,7 @@ class App(UserControl):
                                                 ft.Container(
                                                     right=0,
                                                     top=1,
-                                                    clip_behavior=ClipBehavior.ANTI_ALIAS,
+                                                    clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
                                                     height=9,
                                                     width=9,
                                                     bgcolor=nac,
@@ -230,7 +230,7 @@ class App(UserControl):
                         ),
                     ]
                 ),
-                Column(
+                ft.Column(
                     spacing=5,
                     controls=[
                         ft.Container(
@@ -245,7 +245,7 @@ class App(UserControl):
                                 spacing=0,
                                 alignment="center",
                                 controls=[
-                                    Icon(icons.MENU_OUTLINED, size=20, color=sb_ic)
+                                    ft.Icon(icons.MENU_OUTLINED, size=20, color=sb_ic)
                                 ],
                             ),
                         ),
@@ -260,7 +260,9 @@ class App(UserControl):
                                 spacing=0,
                                 alignment="center",
                                 controls=[
-                                    Icon(icons.SETTINGS_OUTLINED, size=20, color=sb_ic)
+                                    ft.Icon(
+                                        icons.SETTINGS_OUTLINED, size=20, color=sb_ic
+                                    )
                                 ],
                             ),
                         ),
@@ -276,11 +278,11 @@ class App(UserControl):
                                 alignment="center",
                                 controls=[
                                     ft.Container(
-                                        clip_behavior=ClipBehavior.ANTI_ALIAS,
+                                        clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
                                         height=20,
                                         width=20,
                                         border_radius=20,
-                                        content=Image(
+                                        content=ft.Image(
                                             src="assets/dp.jpg", fit=ft.ImageFit.COVER
                                         ),
                                     )
@@ -296,11 +298,11 @@ class App(UserControl):
 
         self.chat_screen_items = Stack(
             controls=[
-                Column(
+                ft.Column(
                     controls=[
                         ft.Container(
                             height=40,
-                            padding=padding.only(left=10),
+                            padding=ft.Padding.only(left=10),
                             # margin=margin.only(bottom=10),
                             content=ft.Row(
                                 controls=[
@@ -315,7 +317,7 @@ class App(UserControl):
                             ),
                         ),  # whatsapp icon
                         ft.Container(
-                            padding=padding.only(
+                            padding=ft.Padding.only(
                                 left=chat_screen_padding, right=chat_screen_padding
                             ),
                             content=ft.Row(
@@ -335,7 +337,7 @@ class App(UserControl):
                                                 height=40,
                                                 width=40,
                                                 border_radius=ih_br,
-                                                content=Image(
+                                                content=ft.Image(
                                                     src="assets/icons/newchat.png",
                                                     color=sb_ic,
                                                 ),
@@ -345,7 +347,7 @@ class App(UserControl):
                                                 height=40,
                                                 width=40,
                                                 border_radius=ih_br,
-                                                content=Image(
+                                                content=ft.Image(
                                                     src="assets/icons/more.png",
                                                     color=sb_ic,
                                                 ),
@@ -360,11 +362,11 @@ class App(UserControl):
                                 alignment="center",
                                 controls=[
                                     ft.Container(
-                                        clip_behavior=ClipBehavior.ANTI_ALIAS,
+                                        clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
                                         border_radius=ih_br,
                                         content=ft.Container(
                                             # on_hover=self.sidebar_btn_hovered,
-                                            clip_behavior=ClipBehavior.ANTI_ALIAS,
+                                            clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
                                             border_radius=ih_br,
                                             height=35,
                                             width=s_bw,
@@ -378,7 +380,7 @@ class App(UserControl):
                                                 controls=[
                                                     ft.Container(
                                                         width=230,
-                                                        padding=padding.only(
+                                                        padding=ft.Padding.only(
                                                             left=15, top=5
                                                         ),
                                                         content=ft.TextField(
@@ -416,19 +418,19 @@ class App(UserControl):
                             )
                         ),  # search box
                         ft.Container(
-                            clip_behavior=ClipBehavior.ANTI_ALIAS,
+                            clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
                             height=40,
-                            padding=padding.only(left=10, right=10),
+                            padding=ft.Padding.only(left=10, right=10),
                             # border_radius=20,
                             content=ft.Container(
                                 border_radius=ih_br,
                                 on_hover=self.sidebar_btn_hovered,
-                                padding=padding.only(left=10, right=10),
+                                padding=ft.Padding.only(left=10, right=10),
                                 content=ft.Row(
                                     vertical_alignment="center",
                                     alignment="spaceBetween",
                                     controls=[
-                                        Icon(icons.DELETE_OUTLINE),
+                                        ft.Icon(icons.DELETE_OUTLINE),
                                         ft.Container(
                                             content=ft.Text(
                                                 value="Archived",
@@ -448,7 +450,7 @@ class App(UserControl):
                         self.chats_contents_column,
                     ]
                 ),
-                Column(
+                ft.Column(
                     controls=[
                         ft.Container(),  # whatsapp icon
                         ft.Container(),  # Status text label
@@ -466,7 +468,7 @@ class App(UserControl):
     def chats_column_f(self):
         self.chat_row = ft.Container(
             height=70,
-            padding=padding.only(left=10, right=10),
+            padding=ft.Padding.only(left=10, right=10),
             content=ft.Container(
                 border_radius=ih_br,
                 on_hover=self.sidebar_btn_hovered,
@@ -479,13 +481,13 @@ class App(UserControl):
                             height=50,
                             width=50,
                             border_radius=30,
-                            clip_behavior=ClipBehavior.ANTI_ALIAS,
-                            content=Image(
+                            clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
+                            content=ft.Image(
                                 src="assets/dp.jpg",
                                 fit=ft.ImageFit.COVER,
                             ),
                         ),
-                        Column(
+                        ft.Column(
                             alignment="center",
                             horizontal_alignment="center",
                             controls=[
@@ -497,7 +499,7 @@ class App(UserControl):
                                         spacing=0,
                                         controls=[
                                             ft.Container(
-                                                clip_behavior=ClipBehavior.ANTI_ALIAS,
+                                                clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
                                                 width=120,
                                                 content=ft.Text("#Se7en", no_wrap=True),
                                             ),
@@ -513,7 +515,7 @@ class App(UserControl):
                                         spacing=0,
                                         controls=[
                                             ft.Container(
-                                                clip_behavior=ClipBehavior.ANTI_ALIAS,
+                                                clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
                                                 width=120,
                                                 content=ft.Text(
                                                     "last message of chat", no_wrap=True
@@ -646,7 +648,7 @@ class App(UserControl):
                         width=120,
                         height=35,
                         bgcolor=s_btn_h_c,
-                        padding=padding.only(left=10),
+                        padding=ft.Padding.only(left=10),
                         border_radius=ih_br,
                         content=ft.Row(
                             controls=[
@@ -654,7 +656,7 @@ class App(UserControl):
                                 #   src='assets/icons/audio.png',
                                 #   color='#CCffffff'
                                 # )
-                                Icon(
+                                ft.Icon(
                                     icons.MUSIC_NOTE_OUTLINED,
                                     size=16,
                                     color="#CCffffff",
@@ -879,7 +881,7 @@ class App(UserControl):
                     ft.Container(
                         offset=transform.Offset(0, 0),
                         animate_offset=animation.Animation(1000),
-                        clip_behavior=ClipBehavior.ANTI_ALIAS,
+                        clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
                         height=17,
                         width=3,
                         bgcolor=ic,
@@ -913,7 +915,7 @@ class App(UserControl):
                     ft.Container(
                         offset=transform.Offset(0, 0),
                         animate_offset=animation.Animation(1000),
-                        clip_behavior=ClipBehavior.ANTI_ALIAS,
+                        clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
                         height=17,
                         width=3,
                         bgcolor=ic,
@@ -937,7 +939,7 @@ class App(UserControl):
 
         self.chat_user_popup = ft.Container(
             offset=transform.Offset(0, -1),
-            clip_behavior=ClipBehavior.ANTI_ALIAS,
+            clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
             height=0,
             animate_offset=animation.Animation(500, "decelerate"),
             bgcolor=sbc,
@@ -958,14 +960,14 @@ class App(UserControl):
                                     alignment="spaceBetween",
                                     spacing=5,
                                     controls=[
-                                        Column(
+                                        ft.Column(
                                             expand=True,
                                             scroll="auto",
                                             controls=[
                                                 self.chat_user_details_sidebar_item,
                                             ],
                                         ),
-                                        Column(
+                                        ft.Column(
                                             controls=[
                                                 ft.Container(
                                                     on_click=self.close_chat_user_popup,
@@ -996,7 +998,7 @@ class App(UserControl):
                                     ],
                                 ),
                             ),
-                            Column(
+                            ft.Column(
                                 expand=True,
                                 controls=[
                                     Stack(
@@ -1038,14 +1040,14 @@ class App(UserControl):
                                     alignment="spaceBetween",
                                     spacing=5,
                                     controls=[
-                                        Column(
+                                        ft.Column(
                                             expand=True,
                                             scroll="auto",
                                             controls=[
                                                 self.settings_sidebar_item,
                                             ],
                                         ),
-                                        Column(
+                                        ft.Column(
                                             controls=[
                                                 ft.Container(
                                                     on_click=self.close_settings_popup,
@@ -1100,7 +1102,7 @@ class App(UserControl):
                                     ],
                                 ),
                             ),
-                            Column(
+                            ft.Column(
                                 expand=True,
                                 controls=[
                                     Stack(
@@ -1130,7 +1132,7 @@ class App(UserControl):
                         width=500,
                     ),
                     ft.Container(
-                        padding=padding.only(top=10, left=10, right=10),
+                        padding=ft.Padding.only(top=10, left=10, right=10),
                         border_radius=ih_br,
                         height=400,
                         width=500,
@@ -1179,7 +1181,7 @@ class App(UserControl):
                                         alignment="spaceBetween",
                                         controls=[
                                             ft.Container(
-                                                padding=padding.only(left=15, top=5),
+                                                padding=ft.Padding.only(left=15, top=5),
                                                 content=ft.TextField(
                                                     border=ft.InputBorder.NONE,
                                                     hint_text="Search emojis",
@@ -1350,7 +1352,7 @@ class App(UserControl):
                                         weight=ft.FontWeight.W_600,
                                         color=mtc,
                                     ),
-                                    Icon(icons.DONE, color=mtc, size=10),
+                                    ft.Icon(icons.DONE, color=mtc, size=10),
                                 ],
                             ),
                         ],
@@ -1405,7 +1407,7 @@ class App(UserControl):
                                                 on_click=self.mini_window,
                                                 height=40,
                                                 width=40,
-                                                content=Image(
+                                                content=ft.Image(
                                                     src="assets/icons/mini.png"
                                                 ),
                                             ),
@@ -1413,7 +1415,7 @@ class App(UserControl):
                                                 on_click=self.max_window,
                                                 height=40,
                                                 width=40,
-                                                content=Image(
+                                                content=ft.Image(
                                                     src="assets/icons/max.png"
                                                 ),
                                             ),
@@ -1421,7 +1423,7 @@ class App(UserControl):
                                                 on_click=self.close_window,
                                                 height=40,
                                                 width=40,
-                                                content=Image(
+                                                content=ft.Image(
                                                     src="assets/icons/close.png"
                                                 ),
                                             ),
@@ -1430,7 +1432,7 @@ class App(UserControl):
                                 ],
                             ),
                             ft.Container(
-                                padding=padding.only(left=20, right=15),
+                                padding=ft.Padding.only(left=20, right=15),
                                 height=50,
                                 content=ft.Row(
                                     alignment="spaceBetween",
@@ -1463,7 +1465,7 @@ class App(UserControl):
                                                         spacing=0,
                                                         alignment="center",
                                                         controls=[
-                                                            Icon(
+                                                            ft.Icon(
                                                                 icons.VIDEO_CALL_OUTLINED,
                                                                 size=20,
                                                                 color=sb_ic,
@@ -1481,7 +1483,7 @@ class App(UserControl):
                                                         spacing=0,
                                                         alignment="center",
                                                         controls=[
-                                                            Icon(
+                                                            ft.Icon(
                                                                 icons.CALL_OUTLINED,
                                                                 size=20,
                                                                 color=sb_ic,
@@ -1504,7 +1506,7 @@ class App(UserControl):
                                                         spacing=0,
                                                         alignment="center",
                                                         controls=[
-                                                            Icon(
+                                                            ft.Icon(
                                                                 icons.SEARCH_OUTLINED,
                                                                 size=20,
                                                                 color=sb_ic,
@@ -1519,7 +1521,7 @@ class App(UserControl):
                             ),
                             ft.Container(
                                 alignment=ft.Alignment.TOP_LEFT,
-                                padding=padding.only(left=20, right=20, top=10),
+                                padding=ft.Padding.only(left=20, right=20, top=10),
                                 expand=True,
                                 image_src=wallpaper,
                                 image_opacity=0.2,
@@ -1535,7 +1537,7 @@ class App(UserControl):
                             ),
                             ft.Container(
                                 margin=margin.only(left=2),
-                                padding=padding.only(left=10, right=10),
+                                padding=ft.Padding.only(left=10, right=10),
                                 height=50,
                                 bgcolor=csc,
                                 content=ft.Row(
@@ -1551,7 +1553,7 @@ class App(UserControl):
                                                 spacing=0,
                                                 alignment="center",
                                                 controls=[
-                                                    Icon(
+                                                    ft.Icon(
                                                         icons.EMOJI_EMOTIONS_OUTLINED,
                                                         size=20,
                                                         color=sb_ic,
@@ -1569,7 +1571,7 @@ class App(UserControl):
                                                 spacing=0,
                                                 alignment="center",
                                                 controls=[
-                                                    Icon(
+                                                    ft.Icon(
                                                         icons.SHARE_OUTLINED,
                                                         size=20,
                                                         color=sb_ic,
