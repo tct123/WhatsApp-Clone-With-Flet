@@ -34,10 +34,10 @@ class App(ft.UserControl):
         # self.pg.window_maximizable = True
         # self.pg.window_minimizable = True
 
-        self.pg.window_bgcolor = colors.TRANSPARENT
-        self.pg.bgcolor = colors.TRANSPARENT
-        self.pg.window_title_bar_hidden = True
-        self.pg.window_frameless = False
+        self.pg.window.bgcolor = ft.Colors.TRANSPARENT
+        self.pg.bgcolor = ft.Colors.TRANSPARENT
+        self.pg.window.title_bar_hidden = True
+        self.pg.window.frameless = False
         self.containers_init()
         self.init_helper()
 
