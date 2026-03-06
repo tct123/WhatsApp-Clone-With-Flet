@@ -56,7 +56,7 @@ class App(UserControl):
                 content=ft.Stack(
                     expand=True,
                     controls=[
-                        Row(
+                        ft.Row(
                             spacing=0,
                             controls=[
                                 self.sidebar,
@@ -328,7 +328,7 @@ class App(UserControl):
                                         size=24,
                                         weight=ft.FontWeight.W_500,
                                     ),
-                                    Row(
+                                    ft.Row(
                                         controls=[
                                             Container(
                                                 on_hover=self.sidebar_btn_hovered,
@@ -581,7 +581,7 @@ class App(UserControl):
                 height=475,
                 scroll="auto",
                 controls=[
-                    Row(
+                    ft.Row(
                         alignment="center",
                         controls=[
                             Container(
@@ -594,7 +594,7 @@ class App(UserControl):
                             ),
                         ],
                     ),
-                    Row(
+                    ft.Row(
                         alignment="center",
                         controls=[
                             Text("Mr. Newton😊", size=20, weight=ft.FontWeight.W_600)
@@ -740,7 +740,7 @@ class App(UserControl):
                         height=1,
                         bgcolor=s_btn_h_c,
                     ),
-                    Row(
+                    ft.Row(
                         alignment="spaceBetween",
                         controls=[
                             Container(
@@ -783,7 +783,7 @@ class App(UserControl):
                 height=475,
                 scroll="auto",
                 controls=[
-                    Row(
+                    ft.Row(
                         alignment="center",
                         controls=[
                             Container(
@@ -796,7 +796,7 @@ class App(UserControl):
                             ),
                         ],
                     ),
-                    Row(
+                    ft.Row(
                         alignment="spaceBetween",
                         controls=[
                             # Text(
@@ -826,7 +826,7 @@ class App(UserControl):
                         weight=ft.FontWeight.W_300,
                         color="white24",
                     ),
-                    Row(
+                    ft.Row(
                         alignment="spaceBetween",
                         controls=[
                             TextField(
@@ -885,7 +885,7 @@ class App(UserControl):
                         bgcolor=ic,
                         border_radius=5,
                     ),
-                    Row(
+                    ft.Row(
                         vertical_alignment="center",
                         spacing=10,
                         controls=[
@@ -919,7 +919,7 @@ class App(UserControl):
                         bgcolor=ic,
                         border_radius=5,
                     ),
-                    Row(
+                    ft.Row(
                         vertical_alignment="center",
                         spacing=10,
                         controls=[
@@ -976,7 +976,7 @@ class App(UserControl):
                                                         alignment="center",
                                                         vertical_alignment="center",
                                                         controls=[
-                                                            Row(
+                                                            ft.Row(
                                                                 vertical_alignment="center",
                                                                 spacing=10,
                                                                 controls=[
@@ -1056,7 +1056,7 @@ class App(UserControl):
                                                         alignment="center",
                                                         vertical_alignment="center",
                                                         controls=[
-                                                            Row(
+                                                            ft.Row(
                                                                 vertical_alignment="center",
                                                                 spacing=10,
                                                                 controls=[
@@ -1080,7 +1080,7 @@ class App(UserControl):
                                                         alignment="center",
                                                         vertical_alignment="center",
                                                         controls=[
-                                                            Row(
+                                                            ft.Row(
                                                                 vertical_alignment="center",
                                                                 spacing=10,
                                                                 controls=[
@@ -1137,10 +1137,10 @@ class App(UserControl):
                         bgcolor=csc,
                         content=ft.Column(
                             controls=[
-                                Row(
+                                ft.Row(
                                     alignment="spaceBetween",
                                     controls=[
-                                        Row(
+                                        ft.Row(
                                             controls=[
                                                 Text("Emoji", size=16),
                                                 Text(
@@ -1340,7 +1340,7 @@ class App(UserControl):
                                 weight=ft.FontWeight.W_400,
                                 size=14,
                             ),
-                            Row(
+                            ft.Row(
                                 spacing=4,
                                 alignment="end",
                                 controls=[
@@ -1389,7 +1389,7 @@ class App(UserControl):
                     content=ft.Column(
                         spacing=0,
                         controls=[
-                            Row(
+                            ft.Row(
                                 alignment="spaceBetween",
                                 controls=[
                                     WindowDragArea(
@@ -1398,7 +1398,7 @@ class App(UserControl):
                                             height=40,
                                         ),
                                     ),
-                                    Row(
+                                    ft.Row(
                                         spacing=0,
                                         controls=[
                                             Container(
@@ -1451,7 +1451,7 @@ class App(UserControl):
                                                 ]
                                             ),
                                         ),
-                                        Row(
+                                        ft.Row(
                                             controls=[
                                                 Container(
                                                     on_hover=self.sidebar_btn_hovered,
