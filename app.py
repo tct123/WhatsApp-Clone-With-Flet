@@ -88,7 +88,7 @@ class App(ft.UserControl):
             content=self.sidebar_column,
         )
         self.chats_screen = ft.Container(
-            animate=animation.Animation(500, AnimationCurve.BOUNCE_OUT),
+            animate=ft.Animation(500, ft.AnimationCurve.BOUNCE_OUT),
             width=csw,
             bgcolor=csc,
             content=self.chat_screen_items,
@@ -97,7 +97,7 @@ class App(ft.UserControl):
             expand=True, bgcolor=dmc, content=self.dm_screen_content
         )
 
-    def sidebar_btn_hovered(self, e: HoverEvent):
+    def sidebar_btn_hovered(self, e: ft.HoverEvent):
         if e.data == "true":
             e.control.bgcolor = s_btn_h_c
 
@@ -105,7 +105,7 @@ class App(ft.UserControl):
             e.control.bgcolor = None
         e.control.update()
 
-    def show_hide_csa(self, e: TapEvent):
+    def show_hide_csa(self, e: ft.TapEvent):
         if e.control.data == "opened":
             self.chats_screen.width = 0
             self.sidebar.bgcolor = csc
@@ -121,8 +121,8 @@ class App(ft.UserControl):
 
     def sidebar(self):
         self.sidebar_column = ft.Column(
-            horizontal_alignment="center",
-            alignment="spaceBetween",
+            horizontal_alignment=ft.CrossAxisAlignment.CENTER,  # "center",
+            alignment=ft.MainAxisAlignment.SPACE_BETWEEN,  # "spaceBetween",
             spacing=0,
             controls=[
                 ft.Column(
@@ -141,7 +141,7 @@ class App(ft.UserControl):
                                 controls=[
                                     ft.Container(
                                         offset=transform.Offset(0, 0),
-                                        animate_offset=animation.Animation(1000),
+                                        animate_offset=ft.Animation(1000),
                                         clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
                                         height=17,
                                         width=3,
@@ -191,7 +191,7 @@ class App(ft.UserControl):
                                 controls=[
                                     ft.Container(
                                         offset=transform.Offset(0, 0),
-                                        animate_offset=animation.Animation(1000),
+                                        animate_offset=ft.Animation(1000),
                                         clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
                                         height=17,
                                         width=3,
@@ -245,7 +245,9 @@ class App(ft.UserControl):
                                 spacing=0,
                                 alignment="center",
                                 controls=[
-                                    ft.Icon(ft.Icon.MENU_OUTLINED, size=20, color=sb_ic)
+                                    ft.Icon(
+                                        ft.Icons.MENU_OUTLINED, size=20, color=sb_ic
+                                    )
                                 ],
                             ),
                         ),
@@ -261,7 +263,7 @@ class App(ft.UserControl):
                                 alignment="center",
                                 controls=[
                                     ft.Icon(
-                                        ft.Icon.SETTINGS_OUTLINED, size=20, color=sb_ic
+                                        ft.Icons.SETTINGS_OUTLINED, size=20, color=sb_ic
                                     )
                                 ],
                             ),
@@ -884,7 +886,7 @@ class App(ft.UserControl):
                 controls=[
                     ft.Container(
                         offset=transform.Offset(0, 0),
-                        animate_offset=animation.Animation(1000),
+                        animate_offset=ft.Animation(1000),
                         clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
                         height=17,
                         width=3,
@@ -918,7 +920,7 @@ class App(ft.UserControl):
                 controls=[
                     ft.Container(
                         offset=transform.Offset(0, 0),
-                        animate_offset=animation.Animation(1000),
+                        animate_offset=ft.Animation(1000),
                         clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
                         height=17,
                         width=3,
@@ -945,7 +947,7 @@ class App(ft.UserControl):
             offset=transform.Offset(0, -1),
             clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
             height=0,
-            animate_offset=animation.Animation(500, "decelerate"),
+            animate_offset=ft.Animation(500, "decelerate"),
             bgcolor=sbc,
             content=ft.Card(
                 expand=True,
@@ -1024,7 +1026,7 @@ class App(ft.UserControl):
             left=80,
             height=0,
             offset=transform.Offset(0, 1.5),
-            animate_offset=animation.Animation(500, "decelerate"),
+            animate_offset=ft.Animation(500, "decelerate"),
             bgcolor=sbc,
             content=ft.Card(
                 expand=True,
@@ -1121,7 +1123,7 @@ class App(ft.UserControl):
         )
 
         self.emoji_popup = ft.Container(
-            animate_offset=animation.Animation(500, "decelerate"),
+            animate_offset=ft.Animation(500, "decelerate"),
             border_radius=ih_br,
             bottom=50,
             left=120,
