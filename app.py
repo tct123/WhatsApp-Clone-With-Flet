@@ -1355,7 +1355,7 @@ class App(UserControl):
                 Container(
                     height=20,
                     width=20,
-                    shape=BoxShape.RECTANGLE,
+                    shape=ft.BoxShape.RECTANGLE,
                     bgcolor=sc,
                     right=0,
                     border_radius=BorderRadius(
