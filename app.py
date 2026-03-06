@@ -1,4 +1,4 @@
-from flet import *
+import flet as ft
 import json
 
 wallpaper = "assets/icons/wallpaper.png"
@@ -1613,4 +1613,4 @@ class App(UserControl):
 
 
 t = App
-app(target=t, assets_dir="assets")
+ft.app(target=t, assets_dir="assets")
