@@ -136,8 +136,8 @@ class App(ft.UserControl):
                             border_radius=5,
                             content=ft.Row(
                                 spacing=0,
-                                alignment="spaceBetween",
-                                vertical_alignment="center",
+                                alignment=ft.MainAxisAlignment.SPACE_BETWEEN,  # "spaceBetween",
+                                vertical_alignment=ft.CrossAxisAlignment.CENTER,  # "center",
                                 controls=[
                                     ft.Container(
                                         offset=transform.Offset(0, 0),
@@ -186,8 +186,8 @@ class App(ft.UserControl):
                             border_radius=ih_br,
                             content=ft.Row(
                                 spacing=0,
-                                alignment="spaceBetween",
-                                vertical_alignment="center",
+                                alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
+                                vertical_alignment=ft.CrossAxisAlignment.CENTER,  # "center",
                                 controls=[
                                     ft.Container(
                                         offset=transform.Offset(0, 0),
@@ -243,7 +243,7 @@ class App(ft.UserControl):
                             border_radius=5,
                             content=ft.Row(
                                 spacing=0,
-                                alignment="center",
+                                alignment=ft.CrossAxisAlignment.CENTER,
                                 controls=[
                                     ft.Icon(
                                         ft.Icons.MENU_OUTLINED, size=20, color=sb_ic
@@ -260,7 +260,7 @@ class App(ft.UserControl):
                             border_radius=5,
                             content=ft.Row(
                                 spacing=0,
-                                alignment="center",
+                                alignment=ft.CrossAxisAlignment.CENTER,
                                 controls=[
                                     ft.Icon(
                                         ft.Icons.SETTINGS_OUTLINED, size=20, color=sb_ic
@@ -277,7 +277,7 @@ class App(ft.UserControl):
                             border_radius=ih_br,
                             content=ft.Row(
                                 spacing=0,
-                                alignment="center",
+                                alignment=ft.CrossAxisAlignment.CENTER,
                                 controls=[
                                     ft.Container(
                                         clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
@@ -324,8 +324,8 @@ class App(ft.UserControl):
                             ),
                             content=ft.Row(
                                 spacing=0,
-                                alignment="spaceBetween",
-                                vertical_alignment="center",
+                                alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
+                                vertical_alignment=ft.CrossAxisAlignment.CENTER,
                                 controls=[
                                     ft.Text(
                                         value="Chats",
@@ -373,8 +373,8 @@ class App(ft.UserControl):
                                             height=35,
                                             width=s_bw,
                                             bgcolor=sbc,
-                                            border=border.only(
-                                                bottom=border.BorderSide(
+                                            border=ft.border.only(
+                                                bottom=ft.border.BorderSide(
                                                     width=1, color=htc
                                                 )
                                             ),
@@ -429,7 +429,7 @@ class App(ft.UserControl):
                                 on_hover=self.sidebar_btn_hovered,
                                 padding=ft.Padding.only(left=10, right=10),
                                 content=ft.Row(
-                                    vertical_alignment="center",
+                                    vertical_alignment=ft.CrossAxisAlignment.CENTER,
                                     alignment=ft.MainAxisAlignment.SPACE_BETWEEN,  # "spaceBetween",
                                     controls=[
                                         ft.Icon(ft.Icons.DELETE_OUTLINE),
@@ -490,13 +490,13 @@ class App(ft.UserControl):
                             ),
                         ),
                         ft.Column(
-                            alignment="center",
-                            horizontal_alignment="center",
+                            alignment=ft.MainAxisAlignment.CENTER,
+                            horizontal_alignment=ft.CrossAxisAlignment.CENTER,
                             controls=[
                                 ft.Container(
                                     width=200,
                                     content=ft.Row(
-                                        alignment="spaceBetween",
+                                        alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
                                         # vertical_alignment='center',
                                         spacing=0,
                                         controls=[
@@ -512,7 +512,7 @@ class App(ft.UserControl):
                                 ft.Container(
                                     width=200,
                                     content=ft.Row(
-                                        alignment="spaceBetween",
+                                        alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
                                         # vertical_alignment='center',
                                         spacing=0,
                                         controls=[
@@ -534,7 +534,7 @@ class App(ft.UserControl):
         )
 
         self.chats_contents_column = ft.Column(
-            scroll="auto",
+            scroll=ft.ScrollMode.AUTO,#"auto",
             expand=True,
             controls=[
                 self.chat_row,
@@ -552,15 +552,15 @@ class App(ft.UserControl):
         print(e.target)
 
     def close_window(self, e):
-        self.pg.window_destroy()
+        self.pg.window.destroy()
 
     def mini_window(self, e):
-        self.pg.window_minimized = True
+        self.pg.window.minimized = True
 
         self.pg.update()
 
     def max_window(self, e):
-        self.pg.window_maximized = True
+        self.pg.window.maximized = True
         self.pg.update()
 
     def hide_emojis_popup(self, e):
@@ -583,23 +583,23 @@ class App(ft.UserControl):
             content=ft.Column(
                 # expand=True,
                 height=475,
-                scroll="auto",
+                scroll=ft.ScrollMode.AUTO,#"auto",
                 controls=[
                     ft.Row(
-                        alignment="center",
+                        alignment=ft.CrossAxisAlignment.CENTER,
                         controls=[
                             ft.Container(
                                 alignment=ft.Alignment.CENTER,
                                 height=100,
                                 width=100,
                                 border_radius=80,
-                                bgcolor="white12",
+                                bgcolor=ft.Colors.WHITE_12,#"white12",
                                 content=ft.Icon(ft.Icons.PERSON, size=50),
                             ),
                         ],
                     ),
                     ft.Row(
-                        alignment="center",
+                        alignment=ft.CrossAxisAlignment.CENTER,
                         controls=[
                             ft.Text("Mr. Newton😊", size=20, weight=ft.FontWeight.W_600)
                         ],
@@ -745,7 +745,7 @@ class App(ft.UserControl):
                         bgcolor=s_btn_h_c,
                     ),
                     ft.Row(
-                        alignment="spaceBetween",
+                        alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
                         controls=[
                             ft.Container(
                                 alignment=ft.Alignment.CENTER,
@@ -785,23 +785,23 @@ class App(ft.UserControl):
             content=ft.Column(
                 # expand=True,
                 height=475,
-                scroll="auto",
+                scroll=ft.ScrollMode.AUTO,#"auto",
                 controls=[
                     ft.Row(
-                        alignment="center",
+                        alignment=ft.CrossAxisAlignment.CENTER,
                         controls=[
                             ft.Container(
                                 alignment=ft.Alignment.CENTER,
                                 height=100,
                                 width=100,
                                 border_radius=80,
-                                bgcolor="white12",
+                                bgcolor=ft.Colors.WHITE_12,#"white12",
                                 content=ft.Icon(ft.Icons.PERSON, size=50),
                             ),
                         ],
                     ),
                     ft.Row(
-                        alignment="spaceBetween",
+                        alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
                         controls=[
                             # ft.Text(
                             #   'Mr. Newton😊',
@@ -830,10 +830,10 @@ class App(ft.UserControl):
                         "About",
                         size=14,
                         weight=ft.FontWeight.W_300,
-                        color="white24",
+                        color=ft.Colors.WHITE_24,#"white24",
                     ),
                     ft.Row(
-                        alignment="spaceBetween",
+                        alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
                         controls=[
                             ft.TextField(
                                 width=250,
@@ -882,7 +882,7 @@ class App(ft.UserControl):
             content=ft.Row(
                 spacing=12,
                 # alignment='spaceBetween',
-                vertical_alignment="center",
+                vertical_alignment=ft.CrossAxisAlignment.CENTER,
                 controls=[
                     ft.Container(
                         offset=transform.Offset(0, 0),
@@ -894,7 +894,7 @@ class App(ft.UserControl):
                         border_radius=5,
                     ),
                     ft.Row(
-                        vertical_alignment="center",
+                        vertical_alignment=ft.CrossAxisAlignment.CENTER,
                         spacing=10,
                         controls=[
                             ft.Image(
@@ -916,7 +916,7 @@ class App(ft.UserControl):
             content=ft.Row(
                 spacing=12,
                 # alignment='spaceBetween',
-                vertical_alignment="center",
+                vertical_alignment=ft.CrossAxisAlignment.CENTER,
                 controls=[
                     ft.Container(
                         offset=transform.Offset(0, 0),
@@ -928,7 +928,7 @@ class App(ft.UserControl):
                         border_radius=5,
                     ),
                     ft.Row(
-                        vertical_alignment="center",
+                        vertical_alignment=ft.CrossAxisAlignment.CENTER,
                         spacing=10,
                         controls=[
                             ft.Image(
@@ -947,7 +947,7 @@ class App(ft.UserControl):
             offset=transform.Offset(0, -1),
             clip_behavior=ft.ClipBehavior.ANTI_ALIAS,
             height=0,
-            animate_offset=ft.Animation(500, "decelerate"),
+            animate_offset=ft.Animation(500, curve=ft.AnimationCurve.DECELERATE),#"decelerate"
             bgcolor=sbc,
             content=ft.Card(
                 expand=True,
@@ -968,7 +968,7 @@ class App(ft.UserControl):
                                     controls=[
                                         ft.Column(
                                             expand=True,
-                                            scroll="auto",
+                                            scroll=ft.ScrollMode.AUTO,#"auto",
                                             controls=[
                                                 self.chat_user_details_sidebar_item,
                                             ],
@@ -981,11 +981,11 @@ class App(ft.UserControl):
                                                     height=35,
                                                     border_radius=ih_br,
                                                     content=ft.Row(
-                                                        alignment="center",
-                                                        vertical_alignment="center",
+                                                        ft.CrossAxisAlignment.CENTER,
+                                                        vertical_alignment=ft.CrossAxisAlignment.CENTER,
                                                         controls=[
                                                             ft.Row(
-                                                                vertical_alignment="center",
+                                                                vertical_alignment=ft.CrossAxisAlignment.CENTER,
                                                                 spacing=10,
                                                                 controls=[
                                                                     ft.Image(
@@ -1026,7 +1026,7 @@ class App(ft.UserControl):
             left=80,
             height=0,
             offset=transform.Offset(0, 1.5),
-            animate_offset=ft.Animation(500, "decelerate"),
+            animate_offset=ft.Animation(500, curve=ft.AnimationCurve.DECELERATE),
             bgcolor=sbc,
             content=ft.Card(
                 expand=True,
@@ -1048,7 +1048,7 @@ class App(ft.UserControl):
                                     controls=[
                                         ft.Column(
                                             expand=True,
-                                            scroll="auto",
+                                            scroll=ft.ScrollMode.AUTO,#"auto",
                                             controls=[
                                                 self.settings_sidebar_item,
                                             ],
@@ -1061,11 +1061,11 @@ class App(ft.UserControl):
                                                     height=35,
                                                     border_radius=ih_br,
                                                     content=ft.Row(
-                                                        alignment="center",
-                                                        vertical_alignment="center",
+                                                        ft.CrossAxisAlignment.CENTER,
+                                                        vertical_alignment=ft.CrossAxisAlignment.CENTER,
                                                         controls=[
                                                             ft.Row(
-                                                                vertical_alignment="center",
+                                                                vertical_alignment=ft.CrossAxisAlignment.CENTER,
                                                                 spacing=10,
                                                                 controls=[
                                                                     ft.Image(
@@ -1085,11 +1085,11 @@ class App(ft.UserControl):
                                                     height=35,
                                                     border_radius=ih_br,
                                                     content=ft.Row(
-                                                        alignment="center",
-                                                        vertical_alignment="center",
+                                                        ft.CrossAxisAlignment.CENTER,
+                                                        vertical_alignment=ft.CrossAxisAlignment.CENTER,
                                                         controls=[
                                                             ft.Row(
-                                                                vertical_alignment="center",
+                                                                vertical_alignment=ft.CrossAxisAlignment.CENTER,
                                                                 spacing=10,
                                                                 controls=[
                                                                     ft.Image(
@@ -1123,7 +1123,7 @@ class App(ft.UserControl):
         )
 
         self.emoji_popup = ft.Container(
-            animate_offset=ft.Animation(500, "decelerate"),
+            animate_offset=ft.Animation(500, curve=ft.AnimationCurve.DECELERATE),
             border_radius=ih_br,
             bottom=50,
             left=120,
@@ -1146,7 +1146,7 @@ class App(ft.UserControl):
                         content=ft.Column(
                             controls=[
                                 ft.Row(
-                                    alignment="spaceBetween",
+                                    alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
                                     controls=[
                                         ft.Row(
                                             controls=[
@@ -1180,11 +1180,11 @@ class App(ft.UserControl):
                                     height=35,
                                     bgcolor=sbc,
                                     border_radius=ih_br,
-                                    border=border.only(
-                                        bottom=border.BorderSide(width=1, color=htc)
+                                    border=ft.border.only(
+                                        bottom=ft.border.BorderSide(width=1, color=htc)
                                     ),
                                     content=ft.Row(
-                                        alignment="spaceBetween",
+                                        alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
                                         controls=[
                                             ft.Container(
                                                 padding=ft.Padding.only(left=15, top=5),
@@ -1278,7 +1278,7 @@ class App(ft.UserControl):
             border_radius=5,
             content=ft.Row(
                 spacing=0,
-                alignment="center",
+                vertical_alignment=ft.CrossAxisAlignment.CENTER,
                 controls=[ft.Icon(ft.Icons.MIC_NONE_OUTLINED, size=20, color=sb_ic)],
             ),
         )
@@ -1350,7 +1350,7 @@ class App(ft.UserControl):
                             ),
                             ft.Row(
                                 spacing=4,
-                                alignment="end",
+                                alignment=ft.CrossAxisAlignment.END,
                                 controls=[
                                     ft.Text(
                                         "5:30 AM",
@@ -1382,8 +1382,8 @@ class App(ft.UserControl):
             on_hover=self.msg_hovered,
             content=ft.Row(
                 spacing=25,
-                alignment="end",
-                vertical_alignment="center",
+                alignment=ft.MainAxisAlignment.END,
+                vertical_alignment=ft.CrossAxisAlignment.CENTER,
                 controls=[
                     self.msg_hover_emoji,
                     self.msg_container,
@@ -1398,7 +1398,7 @@ class App(ft.UserControl):
                         spacing=0,
                         controls=[
                             ft.Row(
-                                alignment="spaceBetween",
+                                alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
                                 controls=[
                                     WindowDragArea(
                                         expand=True,
@@ -1441,7 +1441,7 @@ class App(ft.UserControl):
                                 padding=ft.Padding.only(left=20, right=15),
                                 height=50,
                                 content=ft.Row(
-                                    alignment="spaceBetween",
+                                    alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
                                     controls=[
                                         ft.Container(
                                             on_click=self.show_chat_user_popup,
@@ -1469,10 +1469,10 @@ class App(ft.UserControl):
                                                     border_radius=5,
                                                     content=ft.Row(
                                                         spacing=0,
-                                                        alignment="center",
+                                                        ft.CrossAxisAlignment.CENTER,
                                                         controls=[
                                                             ft.Icon(
-                                                                ft.Icon.VIDEO_CALL_OUTLINED,
+                                                                ft.Icons.VIDEO_CALL_OUTLINED,
                                                                 size=20,
                                                                 color=sb_ic,
                                                             )
@@ -1487,7 +1487,7 @@ class App(ft.UserControl):
                                                     border_radius=5,
                                                     content=ft.Row(
                                                         spacing=0,
-                                                        alignment="center",
+                                                        ft.CrossAxisAlignment.CENTER,
                                                         controls=[
                                                             ft.Icon(
                                                                 ft.Icon.CALL_OUTLINED,
@@ -1510,7 +1510,7 @@ class App(ft.UserControl):
                                                     border_radius=5,
                                                     content=ft.Row(
                                                         spacing=0,
-                                                        alignment="center",
+                                                        ft.CrossAxisAlignment.CENTER,
                                                         controls=[
                                                             ft.Icon(
                                                                 ft.Icon.SEARCH_OUTLINED,
@@ -1557,7 +1557,7 @@ class App(ft.UserControl):
                                             border_radius=5,
                                             content=ft.Row(
                                                 spacing=0,
-                                                alignment="center",
+                                                ft.CrossAxisAlignment.CENTER,
                                                 controls=[
                                                     ft.Icon(
                                                         ft.Icon.EMOJI_EMOTIONS_OUTLINED,
@@ -1575,7 +1575,7 @@ class App(ft.UserControl):
                                             border_radius=5,
                                             content=ft.Row(
                                                 spacing=0,
-                                                alignment="center",
+                                                ft.CrossAxisAlignment.CENTER,
                                                 controls=[
                                                     ft.Icon(
                                                         ft.Icon.SHARE_OUTLINED,
