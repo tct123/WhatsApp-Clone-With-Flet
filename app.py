@@ -27,8 +27,8 @@ mtc = "#689e94"
 smc = "#cddfdb"
 
 
-class App(UserControl):
-    def __init__(self, pg: Page):
+class App(ft.UserControl):
+    def __init__(self, pg: ft.Page):
         super().__init__()
         self.pg = pg
         # self.pg.window_maximizable = True
@@ -149,7 +149,7 @@ class App(UserControl):
                                         border_radius=5,
                                     ),
                                     ft.Container(
-                                        margin=margin.only(right=10),
+                                        margin=ft.Margin.only(right=10),
                                         content=ft.Stack(
                                             controls=[
                                                 ft.Container(
@@ -199,7 +199,7 @@ class App(UserControl):
                                         border_radius=5,
                                     ),
                                     ft.Container(
-                                        margin=margin.only(right=10),
+                                        margin=ft.Margin.only(right=10),
                                         content=ft.Stack(
                                             controls=[
                                                 ft.Container(
@@ -303,7 +303,7 @@ class App(UserControl):
                         ft.Container(
                             height=40,
                             padding=ft.Padding.only(left=10),
-                            # margin=margin.only(bottom=10),
+                            # margin=ft.Margin.only(bottom=10),
                             content=ft.Row(
                                 controls=[
                                     ft.Image(
@@ -430,13 +430,13 @@ class App(UserControl):
                                     vertical_alignment="center",
                                     alignment="spaceBetween",
                                     controls=[
-                                        ft.Icon(ft.Icon.DELETE_OUTLINE),
+                                        ft.Icon(ft.Icons.DELETE_OUTLINE),
                                         ft.Container(
                                             content=ft.Text(
                                                 value="Archived",
                                                 weight=ft.FontWeight.W_600,
                                             ),
-                                            margin=margin.only(right=100),
+                                            margin=ft.Margin.only(right=100),
                                         ),
                                         ft.Text(
                                             value="2",
@@ -813,7 +813,7 @@ class App(UserControl):
                                 border=ft.InputBorder.NONE,
                             ),
                             ft.Container(
-                                margin=margin.only(right=15),
+                                margin=ft.Margin.only(right=15),
                                 on_hover=self.sidebar_btn_hovered,
                                 border_radius=ih_br,
                                 height=35,
@@ -846,7 +846,7 @@ class App(UserControl):
                                 ),
                             ),
                             ft.Container(
-                                margin=margin.only(right=15),
+                                margin=ft.Margin.only(right=15),
                                 on_hover=self.sidebar_btn_hovered,
                                 border_radius=ih_br,
                                 height=35,
@@ -1330,7 +1330,7 @@ class App(UserControl):
             # spacing=0,
             controls=[
                 ft.Container(
-                    margin=margin.only(right=6),
+                    margin=ft.Margin.only(right=6),
                     alignment=ft.Alignment.CENTER_LEFT,
                     width=500,
                     padding=10,
@@ -1540,7 +1540,7 @@ class App(UserControl):
                                 ),
                             ),
                             ft.Container(
-                                margin=margin.only(left=2),
+                                margin=ft.Margin.only(left=2),
                                 padding=ft.Padding.only(left=10, right=10),
                                 height=50,
                                 bgcolor=csc,
