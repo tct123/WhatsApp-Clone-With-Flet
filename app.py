@@ -53,7 +53,7 @@ class App(UserControl):
                 border_radius=br,
                 expand=True,
                 bgcolor=dmc,
-                content=Stack(
+                content=ft.Stack(
                     expand=True,
                     controls=[
                         Row(
@@ -150,7 +150,7 @@ class App(UserControl):
                                     ),
                                     Container(
                                         margin=margin.only(right=10),
-                                        content=Stack(
+                                        content=ft.Stack(
                                             controls=[
                                                 Container(
                                                     clip_behavior=ClipBehavior.ANTI_ALIAS,
@@ -200,7 +200,7 @@ class App(UserControl):
                                     ),
                                     Container(
                                         margin=margin.only(right=10),
-                                        content=Stack(
+                                        content=ft.Stack(
                                             controls=[
                                                 Container(
                                                     clip_behavior=ClipBehavior.ANTI_ALIAS,
@@ -1117,7 +1117,7 @@ class App(UserControl):
             left=120,
             height=0,
             offset=transform.Offset(0, 1.5),
-            content=Stack(
+            content=ft.Stack(
                 controls=[
                     Card(
                         expand=True,
@@ -1602,7 +1602,7 @@ class App(UserControl):
                     )
                 ),
                 Container(
-                    content=Stack(
+                    content=ft.Stack(
                         controls=[
                             self.chat_user_popup,
                         ]
