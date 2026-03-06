@@ -430,7 +430,7 @@ class App(UserControl):
                                     controls=[
                                         Icon(icons.DELETE_OUTLINE),
                                         ft.Container(
-                                            content=Text(
+                                            content=ft.Text(
                                                 value="Archived",
                                                 weight=ft.FontWeight.W_600,
                                             ),
@@ -499,7 +499,7 @@ class App(UserControl):
                                             ft.Container(
                                                 clip_behavior=ClipBehavior.ANTI_ALIAS,
                                                 width=120,
-                                                content=Text("#Se7en", no_wrap=True),
+                                                content=ft.Text("#Se7en", no_wrap=True),
                                             ),
                                             ft.Text("12:20AM"),
                                         ],
@@ -515,7 +515,7 @@ class App(UserControl):
                                             ft.Container(
                                                 clip_behavior=ClipBehavior.ANTI_ALIAS,
                                                 width=120,
-                                                content=Text(
+                                                content=ft.Text(
                                                     "last message of chat", no_wrap=True
                                                 ),
                                             ),
@@ -749,7 +749,7 @@ class App(UserControl):
                                 width=155,
                                 border_radius=ih_br,
                                 bgcolor=s_btn_h_c,
-                                content=Text(
+                                content=ft.Text(
                                     "Block",
                                     size=14,
                                     weight=ft.FontWeight.W_400,
@@ -762,7 +762,7 @@ class App(UserControl):
                                 width=155,
                                 border_radius=ih_br,
                                 bgcolor=s_btn_h_c,
-                                content=Text(
+                                content=ft.Text(
                                     "Report contact",
                                     size=14,
                                     weight=ft.FontWeight.W_400,
