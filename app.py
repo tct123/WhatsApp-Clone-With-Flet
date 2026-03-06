@@ -129,7 +129,7 @@ class App(UserControl):
                     controls=[
                         Container(
                             # on_hover=self.sidebar_btn_hovered,
-                            alignment=alignment.center,
+                            alignment=ft.Alignment.CENTER,
                             height=s_btn_h,
                             width=s_btn_w,
                             bgcolor=s_btn_h_c,
@@ -179,7 +179,7 @@ class App(UserControl):
                         ),
                         Container(
                             on_hover=self.sidebar_btn_hovered,
-                            alignment=alignment.center,
+                            alignment=ft.Alignment.CENTER,
                             height=s_btn_h,
                             width=s_btn_w,
                             # bgcolor = s_btn_h_c,
@@ -237,7 +237,7 @@ class App(UserControl):
                             data="opened",
                             on_hover=self.sidebar_btn_hovered,
                             on_click=self.show_hide_csa,
-                            alignment=alignment.center,
+                            alignment=ft.Alignment.CENTER,
                             height=s_btn_h,
                             width=s_btn_w,
                             border_radius=5,
@@ -252,7 +252,7 @@ class App(UserControl):
                         Container(
                             on_hover=self.sidebar_btn_hovered,
                             on_click=self.show_settings_popup,
-                            alignment=alignment.center,
+                            alignment=ft.Alignment.CENTER,
                             height=s_btn_h,
                             width=s_btn_w,
                             border_radius=5,
@@ -267,7 +267,7 @@ class App(UserControl):
                         Container(
                             on_hover=self.sidebar_btn_hovered,
                             on_click=self.show_settings_popup,
-                            alignment=alignment.center,
+                            alignment=ft.Alignment.CENTER,
                             height=s_btn_h,
                             width=s_btn_w,
                             border_radius=ih_br,
@@ -585,7 +585,7 @@ class App(UserControl):
                         alignment="center",
                         controls=[
                             Container(
-                                alignment=alignment.center,
+                                alignment=ft.Alignment.CENTER,
                                 height=100,
                                 width=100,
                                 border_radius=80,
@@ -660,7 +660,7 @@ class App(UserControl):
                                     color="#CCffffff",
                                 ),
                                 Dropdown(
-                                    alignment=alignment.center,
+                                    alignment=ft.Alignment.CENTER,
                                     label_style=ft.TextStyle(
                                         size=12,
                                         color="#CCffffff",
@@ -712,7 +712,7 @@ class App(UserControl):
                                     width=120,
                                     content=Dropdown(
                                         # icon=icons.MUSIC_NOTE_OUTLINED,
-                                        alignment=alignment.center,
+                                        alignment=ft.Alignment.CENTER,
                                         label_style=ft.TextStyle(
                                             size=12,
                                             color="#CCffffff",
@@ -744,7 +744,7 @@ class App(UserControl):
                         alignment="spaceBetween",
                         controls=[
                             Container(
-                                alignment=alignment.center,
+                                alignment=ft.Alignment.CENTER,
                                 height=35,
                                 width=155,
                                 border_radius=ih_br,
@@ -757,7 +757,7 @@ class App(UserControl):
                                 ),
                             ),
                             Container(
-                                alignment=alignment.center,
+                                alignment=ft.Alignment.CENTER,
                                 height=35,
                                 width=155,
                                 border_radius=ih_br,
@@ -787,7 +787,7 @@ class App(UserControl):
                         alignment="center",
                         controls=[
                             Container(
-                                alignment=alignment.center,
+                                alignment=ft.Alignment.CENTER,
                                 height=100,
                                 width=100,
                                 border_radius=80,
@@ -1264,7 +1264,7 @@ class App(UserControl):
         self.send_msg_btn = Container(
             on_click=self.load_messages,
             on_hover=self.sidebar_btn_hovered,
-            alignment=alignment.center,
+            alignment=ft.Alignment.CENTER,
             height=40,
             width=40,
             border_radius=5,
@@ -1325,7 +1325,7 @@ class App(UserControl):
             controls=[
                 Container(
                     margin=margin.only(right=6),
-                    alignment=alignment.center_left,
+                    alignment=ft.Alignment.CENTER_LEFT,
                     width=500,
                     padding=10,
                     bgcolor=sc,
@@ -1455,7 +1455,7 @@ class App(UserControl):
                                             controls=[
                                                 Container(
                                                     on_hover=self.sidebar_btn_hovered,
-                                                    alignment=alignment.center,
+                                                    alignment=ft.Alignment.CENTER,
                                                     height=s_btn_h,
                                                     width=s_btn_w,
                                                     border_radius=5,
@@ -1473,7 +1473,7 @@ class App(UserControl):
                                                 ),
                                                 Container(
                                                     on_hover=self.sidebar_btn_hovered,
-                                                    alignment=alignment.center,
+                                                    alignment=ft.Alignment.CENTER,
                                                     height=s_btn_h,
                                                     width=s_btn_w,
                                                     border_radius=5,
@@ -1496,7 +1496,7 @@ class App(UserControl):
                                                 ),
                                                 Container(
                                                     on_hover=self.sidebar_btn_hovered,
-                                                    alignment=alignment.center,
+                                                    alignment=ft.Alignment.CENTER,
                                                     height=s_btn_h,
                                                     width=s_btn_w,
                                                     border_radius=5,
@@ -1518,7 +1518,7 @@ class App(UserControl):
                                 ),
                             ),
                             Container(
-                                alignment=alignment.top_left,
+                                alignment=ft.Alignment.TOP_LEFT,
                                 padding=padding.only(left=20, right=20, top=10),
                                 expand=True,
                                 image_src=wallpaper,
@@ -1543,7 +1543,7 @@ class App(UserControl):
                                         Container(
                                             on_hover=self.sidebar_btn_hovered,
                                             on_click=self.show_emojis_popup,
-                                            alignment=alignment.center,
+                                            alignment=ft.Alignment.CENTER,
                                             height=40,
                                             width=40,
                                             border_radius=5,
@@ -1561,7 +1561,7 @@ class App(UserControl):
                                         ),
                                         Container(
                                             on_hover=self.sidebar_btn_hovered,
-                                            alignment=alignment.center,
+                                            alignment=ft.Alignment.CENTER,
                                             height=40,
                                             width=40,
                                             border_radius=5,
