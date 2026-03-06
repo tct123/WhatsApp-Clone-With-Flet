@@ -380,7 +380,7 @@ class App(UserControl):
                                                             left=15, top=5
                                                         ),
                                                         content=ft.TextField(
-                                                            border=InputBorder.NONE,
+                                                            border=ft.InputBorder.NONE,
                                                             hint_text="Search or start a new chat",
                                                             hint_style=ft.TextStyle(
                                                                 size=14,
@@ -804,7 +804,7 @@ class App(UserControl):
                                 width=200,
                                 value="Mr. Newton😊",
                                 text_size=20,
-                                border=InputBorder.NONE,
+                                border=ft.InputBorder.NONE,
                             ),
                             Container(
                                 margin=margin.only(right=15),
@@ -830,7 +830,7 @@ class App(UserControl):
                                 multiline=True,
                                 value="Hey there! WhatsApp is using me!",
                                 text_size=14,
-                                border=InputBorder.NONE,
+                                border=ft.InputBorder.NONE,
                                 text_style=ft.TextStyle(
                                     size=14,
                                     weight=FontWeight.W_400,
@@ -1177,7 +1177,7 @@ class App(UserControl):
                                             Container(
                                                 padding=padding.only(left=15, top=5),
                                                 content=ft.TextField(
-                                                    border=InputBorder.NONE,
+                                                    border=ft.InputBorder.NONE,
                                                     hint_text="Search emojis",
                                                     hint_style=ft.TextStyle(
                                                         size=14,
@@ -1579,7 +1579,7 @@ class App(UserControl):
                                             content=ft.TextField(
                                                 expand=True,
                                                 multiline=True,
-                                                border=InputBorder.NONE,
+                                                border=ft.InputBorder.NONE,
                                                 hint_text="Type a message",
                                                 hint_style=ft.TextStyle(
                                                     size=14,
